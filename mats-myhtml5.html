@@ -1,0 +1,133 @@
+<html>
+
+<head>
+     <title>mats-myhtml5.html</title>
+</head>
+
+   <body>
+
+      <font color="olive">
+      <center> Решение квадратного уравнения. </center>
+      </font><br>
+
+      <font color="olive">
+      <center> Уравнение вида y = ax<sup>2</sup> + bx + c решается таким образом </center>
+      </font><br>
+
+
+      <font color="olive">
+      <center> решается таким образом </center>
+      </font><br>
+
+
+      <font color="olive">
+      <center> <em>если</em> D ( D = b<sup>2</sup> - 4 * a * c ) < чем 0 </center>
+      </font><br>
+
+      <font color="olive">
+      <center> то решений нет </center>
+      </font><br>
+
+      <font color="olive">
+      <center> если же D > 0 то </center>
+      </font><br>
+
+      <font color="olive">
+      <center> x<sub>1</sub> = -b - D<sup>0,5</sup> / 2 * a</center>
+      </font><br>
+
+      <font color="olive">
+      <center> x<sub>2</sub> = -b + D<sup>0,5</sup> / 2 * a</center>
+      </font><br>
+
+      <font color="olive">
+      <center> в случае если D = 0, то </center>
+      </font><br>
+
+      <font color="olive">
+      <center> x = -b / 2 * a</center>
+      </font><br>
+
+      <font color="olive">
+      <center> алгоритм решения квадратного уравнения на Pascal </center>
+      </font><br>
+
+      <p>  </p>
+
+      <p> program QuadraticEquation; <p> 
+
+      <p> var  </p>
+      <p> a, b, c, x1, x2, discriminant : real; </p>
+      <p> begin </p>
+      <p> {ввыод данных} </p>
+      <p> write('a = '); </p>
+      <p> readln(a); </p>
+      <p> write('b = '); </p>
+      <p> readln(b); </p>
+      <p> write('c = '); </p>
+      <p> readln(c); </p>
+      <p> {дискриминант} </p>
+      <p> discriminant := sqr(b) - 4 * a * c;  </p> 
+      <p> if discriminant < 0 then </p>
+      <p> writeln('Квадратное уравнение не имеет корней') </p>
+      <p> else </p>
+      <p> begin </p>
+      <p> if discriminant = 0 then </p>
+      <p> begin </p>
+      <p>   {квадратное уравнение имеет два одинаковых корня} </p>
+      <p>   x1 := -b / (2 * a); </p>
+      <p>   x2 := x1; </p>
+      <p>  end </p>
+      <p> else </p>
+      <p>  begin </p>
+      <p>    {уравнение имеет два разных корня} </p>
+      <p>     x1 := (-b + sqrt(discriminant)) / (2 * a); </p>
+      <p>     x2 := (-b - sqrt(discriminant)) / (2 * a); </p>
+      <p>   end;   </p>
+      <p> {вывод корней уравнения} </p>
+      <p>  writeln('x1 = ', x1:8:3); </p>
+      <p>  writeln('x2 = ', x2:8:3); </p>
+      <p> end; </p>
+      <p> writeln('Press Enter to Exit...'); </p>
+      <p> readln; </p>
+      <p> end. </p>
+
+      <font color="olive">
+      <center> алгоритм решения квадратного уравнения на C++ </center>
+      </font><br
+       
+      <p>  </p>
+      <p> #include <iostream> </p>
+      <p> #include <cmath> </p>
+      <p> using namespace std; </p>
+      <p> int main() </p>
+      <p> { </p>
+          <p> double a; </p>
+          <p> double b; </p>
+          <p> double c; </p>
+          <p> double x; </p>
+      <p>     cout << "Введите значение a: "; </p>
+      <p>     cin >> a; </p>
+      <p>     cout << "Введите значение b: "; </p>
+      <p>     cin >> b; </p>
+      <p>     cout << "Введите значение c: "; </p>
+      <p>     cin >> c; </p>
+      <p>     if((b*b - 4*a*c) >= 0) //Если дискриминант больше или равен 0 </p>
+      <p>     { </p>
+      <p>         x = ( -1*b + sqrt(b*b - 4*a*c) ) / (2 * a); </p>
+      <p>         cout << "Первый корень равен " << x << endl; </p>
+      <p>         x = ( -1*b - sqrt(b*b - 4*a*c) ) / (2 * a); </p>
+      <p>         cout << "Второй корень равен " << x << endl; </p>
+      <p>     } </p>
+      <p>     else </p>
+      <p>     { </p>
+      <p>         cout << "Дискриминант меньше 0, корни невещественные." << endl; </p>
+      <p>     } </p>
+      <p>     return 0; </p>
+      <p> } </p>
+
+
+</body>
+
+</html>
+
